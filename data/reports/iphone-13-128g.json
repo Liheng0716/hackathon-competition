@@ -1,0 +1,38 @@
+{
+  "model_id": "iphone-13-128g",
+  "model_name": "iPhone 13 128G",
+  "generated_at": "2026-11-02T20:10:00+08:00",
+  "verdict": "buy",
+  "verdict_reason": "当前价处于近 30 天历史低位，比近九成交易日更便宜；A15 性能仍够用三年，128G 版本适合作为主力机或备用机，综合推荐入手。",
+  "price_position": {
+    "percentile": 22,
+    "current": 4988,
+    "low": 4880,
+    "high": 5799
+  },
+  "pros": [
+    "A15 芯片性能充足，日常与游戏流畅",
+    "续航与影像在同价位仍有竞争力",
+    "iOS 生态成熟，系统更新周期长"
+  ],
+  "cons": [
+    "128G 存储对重度用户偏紧",
+    "屏幕为 60Hz，高刷体验缺失",
+    "二手市场翻新机较多，需仔细验机"
+  ],
+  "pitfalls": [
+    {
+      "title": "闲鱼低价「准新机」实为翻新",
+      "detail": "多位用户反馈标价 3200 元左右的 iPhone 13 存在换屏、换电池痕迹，入手后电池健康度异常。"
+    },
+    {
+      "title": "扩容机冒充 128G",
+      "detail": "部分 64G 扩容至 128G 的机器混入二手市场，建议查询序列号核实原始容量。"
+    }
+  ],
+  "sources": [
+    { "title": "京东自营 iPhone 13 128G", "url": "https://item.jd.com/100012043978.html" },
+    { "title": "慢慢买 历史价格走势", "url": "https://www.manmanbuy.com/" },
+    { "title": "知乎 · iPhone 13 使用体验汇总", "url": "https://www.zhihu.com/" }
+  ]
+}
