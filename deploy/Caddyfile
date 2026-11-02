@@ -1,0 +1,23 @@
+# /etc/caddy/Caddyfile —— 自动 HTTPS（Let's Encrypt），HTTP 自动 301 跳 HTTPS
+# 把 jiijian.top 换成你的真实域名；南向反代 Next.js 3000
+{
+	email ADMIN_EMAIL
+}
+
+jiijian.top, www.jiijian.top {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:3000 {
+		header_up X-Real-IP {remote_host}
+	}
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+	}
+	log {
+		output file /var/log/caddy/jiijian.log {
+			roll_size 20MiB
+			roll_keep 5
+		}
+	}
+}

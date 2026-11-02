@@ -1,0 +1,36 @@
+# deps / build
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# env
+.env
+.env.local
+.env*.local
+
+# 生成物：报告缓存不入库（由脚本预生成后手动提交需要的几份）
+data/reports/*.json
+
+# 本机缓存与临时文件
+.npm-cache/
+.pnpm-store/
+.tmp-swc/
+__pycache__/
+*.pyc
+*.log
+skipped.csv
+jiijian-submit-*.zip
+.DS_Store
+Thumbs.db
+
+# 本地原始素材（任务书原件、讨论稿、抓图，不入仓库；docs/ 下已入库正式副本）
+任务书/
+任务书.zip
+*.docx
+test_phone.png
+read_docx*.py
+verify_docx*.py
+probe_*.py
+test_model_apis.py

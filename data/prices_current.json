@@ -1,0 +1,102 @@
+{
+  "iphone-13-128g": {
+    "jd": 3779,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "iphone-14-pro-256g": {
+    "jd": 5439,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "mate-60-pro": {
+    "jd": 5039,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "xiaomi-14": {
+    "jd": 2919,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "redmi-k70": {
+    "jd": 1649,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "oneplus-ace-3": {
+    "jd": 1689,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "iphone-15-128g": {
+    "jd": 4319,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "iphone-12-64g": {
+    "jd": 2469,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "mate-60": {
+    "jd": 3719,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "nova-12": {
+    "jd": 1699,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "huawei-p60": {
+    "jd": 2329,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "honor-100": {
+    "jd": 1499,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "honor-x50": {
+    "jd": 809,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "xiaomi-13": {
+    "jd": 2199,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "redmi-note-13-pro": {
+    "jd": 929,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "oppo-reno-12": {
+    "jd": 1849,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "oneplus-ace-3v": {
+    "jd": 1399,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "vivo-s19": {
+    "jd": 1809,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "iqoo-neo9": {
+    "jd": 1519,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  },
+  "samsung-s24": {
+    "jd": 3599,
+    "captured_at": "2026-11-02T20:00:00+08:00",
+    "source": "seed"
+  }
+}
