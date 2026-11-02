@@ -10,8 +10,8 @@ next-env.d.ts
 .env.local
 .env*.local
 
-# 生成物：报告缓存不入库（由脚本预生成后手动提交需要的几份）
-data/reports/*.json
+# 报告缓存：预生成的 T1 六份入库（演示要有内容），临时文件不入库
+data/reports/*.tmp
 
 # 本机缓存与临时文件
 .npm-cache/
@@ -21,6 +21,7 @@ __pycache__/
 *.pyc
 *.log
 skipped.csv
+.tmp-*
 jiijian-submit-*.zip
 .DS_Store
 Thumbs.db
