@@ -35,3 +35,6 @@ read_docx*.py
 verify_docx*.py
 probe_*.py
 test_model_apis.py
+
+# 本地部署素材（AI Works skill 包/探查清单，不入库）
+部署/

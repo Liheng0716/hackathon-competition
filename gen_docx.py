@@ -62,7 +62,7 @@ st.font.size = Pt(10.5)
 t = doc.add_paragraph(); t.alignment = WD_ALIGN_PARAGRAPH.CENTER
 set_font(t.add_run('机鉴 · 数码产品行情与避坑决策平台'), size=20, bold=True)
 sub = doc.add_paragraph(); sub.alignment = WD_ALIGN_PARAGRAPH.CENTER
-set_font(sub.add_run('2026 软工实践周参赛项目介绍 · 讨论稿 v0.10'), size=10, color=RGBColor(0x66,0x66,0x66))
+set_font(sub.add_run('2026 软工实践周参赛项目介绍 · 讨论稿 v0.11'), size=10, color=RGBColor(0x66,0x66,0x66))
 sub2 = doc.add_paragraph(); sub2.alignment = WD_ALIGN_PARAGRAPH.CENTER
 set_font(sub2.add_run('v0.9 变更：部署主线=学生券 0 元 ECS（2核4G 杭州 1 个月）｜http://IP:3000 体验链接｜流量 0.8元/GB 控量'), size=8.5, color=RGBColor(0x88,0x88,0x88))
 

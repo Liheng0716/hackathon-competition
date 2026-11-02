@@ -6,10 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "seed": "node scripts/seed_data.mjs",
-    "submit": "node scripts/make_submit_zip.mjs",
-    "import_data": "python scripts/import_prices.py prices_history.csv prices_current.csv"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "14.2.35",
