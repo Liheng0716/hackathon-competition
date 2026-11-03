@@ -30,6 +30,41 @@ function fileToDataUrl(file: File): Promise<string> {
   });
 }
 
+function loadImage(src: string): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error("image decode failed"));
+    img.src = src;
+  });
+}
+
+/**
+ * 手机原图常见 3~5MB，base64 后膨胀 1/3，直传容易超时或被视觉模型拒收。
+ * 先按最长边缩到 1600px、JPEG 0.85 再上传；非图片/解码失败则回退原图。
+ */
+async function fileToUploadDataUrl(
+  file: File,
+  maxEdge = 1600,
+  quality = 0.85,
+): Promise<string> {
+  const raw = await fileToDataUrl(file);
+  try {
+    const img = await loadImage(raw);
+    const scale = Math.min(1, maxEdge / Math.max(img.width, img.height));
+    if (scale === 1 && file.size < 1_500_000) return raw;
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.round(img.width * scale);
+    canvas.height = Math.round(img.height * scale);
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return raw;
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    return canvas.toDataURL("image/jpeg", quality);
+  } catch {
+    return raw;
+  }
+}
+
 export default function VerifyPage() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const cameraInputRef = useRef<HTMLInputElement>(null);
@@ -53,7 +88,7 @@ export default function VerifyPage() {
     setStatus("uploading");
     try {
       // 契约：POST /api/verify，body 为 JSON { image: "data:image/...base64" }
-      const image = await fileToDataUrl(file);
+      const image = await fileToUploadDataUrl(file);
       setStatus("analyzing");
       const res = await fetch("/api/verify", {
         method: "POST",
