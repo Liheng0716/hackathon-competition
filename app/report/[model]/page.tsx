@@ -26,7 +26,13 @@ async function readJson<T>(rel: string): Promise<T | null> {
 async function loadReport(model: string): Promise<ReportData | null> {
   // 路由参数会拼进文件路径，白名单校验防路径穿越
   if (!/^[a-z0-9-]+$/i.test(model)) return null;
-  return readJson<ReportData>(path.join("data", "reports", `${model}.json`));
+  // data/reports/** 属 E 泳道（真数据），优先读取
+  const real = await readJson<ReportData>(path.join("data", "reports", `${model}.json`));
+  if (real) return real;
+  // 真数据未生成前，回落到泳道1B 自带的演示样例（不写 data/reports，避免目录越界）
+  return readJson<ReportData>(
+    path.join("components", "report", "mock", `${model}.json`),
+  );
 }
 
 /** 报告契约不含机型名，从 models.json 补一个展示名（缺失则回落 model_id） */
