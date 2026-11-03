@@ -24,6 +24,8 @@ async function readJson<T>(rel: string): Promise<T | null> {
 }
 
 async function loadReport(model: string): Promise<ReportData | null> {
+  // 路由参数会拼进文件路径，白名单校验防路径穿越
+  if (!/^[a-z0-9-]+$/i.test(model)) return null;
   return readJson<ReportData>(path.join("data", "reports", `${model}.json`));
 }
 
